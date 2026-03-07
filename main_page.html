@@ -1,11 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Main page</title>
+    <link rel="shortcut icon" href="assets/github-logo.png" type="image/x-icon">
+    <!-- Tailwind +daisyui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    <h2>Main page</h2>
+    <!-- navbar section -->
+    <nav class="  md:navbar bg-base-100 shadow-sm px-20 mb-15">
+        <div class="flex-1 items-center justify-between mb-2.5">
+            <div class="flex h[37px]">
+                <img class="h-12" src="assets/github-logo.png " alt="">
+                <a class="btn btn-ghost text-xl ">GitHub Issues Tracker</a>
+            </div>
+        </div>
+        <div class="flex gap-2 ">
+            <div class="relative flex items-center m-2.5">
+               <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto p-4 pl-10" />
+            </div>
+            <button class="bg-[#4A00FF] px-4 rounded-md mb-2.5 text-[#FFFFFf]">Search</button>
+        </div>
+    </nav>
+
+    <!-- All tab section -->
+    <section class=" md:w-9/12 mx-auto py-10 shadow-2xl mb-10">
+        <div class="flex flex-row md:flex-row gap-4">
+            <button class="btn ml-5 px-12 bg-[#4A00FF] text-[#FFFFFF]">All</button>
+            <button class="btn px-12">Open</button>
+            <button class="btn px-12">Closed</button>
+        </div>
+    </section>
+
+    <!-- track Issue section -->
+    <section class=" md:w-9/12 mx-auto py-10 shadow-2xl">
+        <div class="flex justify-between mx-4"> 
+            <div class="flex items-center gap-1.5">
+                <div><img src="./assets/Aperture.png" alt=""></div>
+                  <div>
+                <h1>50 Issues</h1>
+                <p>Track and manage your project issues</p>
+
+            </div>
+            </div>
+          
+            <div class="flex gap-5">
+                <div class="flex items-center gap-2">
+                    <div class="bg-green-600 w-2.5 h-2.5 rounded-full"></div>
+                    <p>Open</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <div class="bg-red-600 w-2.5 h-2.5 rounded-full"></div>
+                    <p>Closed</p>
+                </div>
+                
+            </div>
+        </div>
+       
+    </section>
+
+    <!-- card desingh -->
+     <div class=" md:w-9/12 mx-auto py-10">
+        <div id="githubContainer" class="grid grid-cols-1 sm:grid-cols-4">
+     <!-- <div class="card bg-white  shadow-sm">
+     <div class="mx-4 mt-4">
+     <div class="flex justify-between">
+     <img src="assets/Open-Status.png" alt="">
+     <button class="bg-[#FEECEC] text-red-500 px-4">High</button>
+     </div>
+        </div>
+        <div class="card-body ">
+          <div class="">
+        <h2 class="card-title font-semibold text-xl">Fix navigation menu on mobile devices</h2>
+        <p class="text-[#64748B] text-xl">The navigation menu doesn't collapse <br> properly on mobile devices...</p>
+        </div>
+        <div class="card-actions gap-2 my-3">
+            <button class="btn bg-[#FEECEC] h-8 rounded-2xl"><i class="fa-solid fa-bug"></i>Bug</button>
+            <button class="btn btn-primary h-8 px-4 rounded-2xl"><i class="fa-solid fa-circle-question"></i>help wanted</button>
+          </div>
+          <hr class="my-3">
+          <div>
+            <p class="text-[#64748B]">#1by john_doe</p>
+            <p class="text-[#64748B]">1/15/2024</p>
+          </div>
+        </div>
+        </div> -->
+        
+     </div>
+     </div>
+
+
+
+
 </body>
+
 </html>
