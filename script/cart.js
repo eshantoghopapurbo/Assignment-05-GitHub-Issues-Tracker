@@ -1,7 +1,20 @@
 
 const githubContainer =document.getElementById("githubContainer")
 const count = document.getElementById("count")
-
+// search 
+document.getElementById("src-btn").addEventListener("click", function () {
+  const input = document.getElementById("input-btn");
+  const inputValue = input.value.trim().toLowerCase();
+  fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
+    .then((result) => result.json())
+    .then((data) => {
+      const allProblem = data.data;
+      const filterProblem = allProblem.filter((problem) =>
+        problem.title.toLowerCase().includes(inputValue),
+      );
+     displayCards(filterProblem);
+    });
+});
 
 let allCards = []
 async function loadCards(){
